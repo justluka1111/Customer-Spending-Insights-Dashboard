@@ -1,23 +1,18 @@
-# Use Node 18 Alpine
-FROM node:18-alpine
+# Stage 1: Build
+FROM node:20-alpine AS builder
 
-# Set working directory
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy the rest of the app
 COPY . .
-
-# Build app with Vite (no tsc)
 RUN npm run build
 
-# Expose port (Vite preview uses 4173 by default, you can change to 3000)
-EXPOSE 4173
+# Stage 2: Serve
+FROM node:20-alpine
 
-# Start preview server
-CMD ["npm", "run", "preview"]
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=builder /app/dist ./dist
+
+EXPOSE 4173
+CMD ["serve", "-s", "dist", "-l", "4173"]
