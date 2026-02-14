@@ -1,40 +1,26 @@
-# Customer Spending Insights Dashboard - TODO
+# Fintech UI Upgrade TODO
 
-## Project Setup
+## Implementation Plan
 
-- [x] Create package.json with dependencies
-- [x] Create tsconfig.json
-- [x] Create public/index.html
-- [x] Create src/index.tsx and App.tsx
+### Phase 1: Theme Setup
 
-## State Management
+- [ ] 1. Create src/theme.ts - MUI theme with fintech colors
+- [ ] 2. Update src/index.tsx - Add ThemeProvider and CssBaseline
 
-- [x] Create context/DashboardContext.tsx for customerId, period, etc.
+### Phase 2: Layout Components
 
-## Mock API
+- [ ] 3. Update src/components/layout/Header.tsx - Migrate styles to MUI sx prop
+- [ ] 4. Update src/components/layout/Sidebar.tsx - Migrate styles to MUI sx prop
+- [ ] 5. Update src/components/layout/DashboardLayout.tsx - Update layout with max-width
 
-- [ ] Create utils/mockApi.ts with mock data for all endpoints
+### Phase 3: Card Components
 
-## Components
+- [ ] 6. Update src/pages/Profile.tsx - Update card styling
+- [ ] 7. Update src/pages/Summary.tsx - Update card styling
+- [ ] 8. Update src/components/charts/GoalsChart.tsx - Update card styling
 
-- [x] Create components/Dashboard.tsx (main layout)
-- [x] Create components/Profile.tsx
-- [x] Create components/Summary.tsx
-- [x] Create components/CategoryChart.tsx (PieChart)
-- [x] Create components/TrendsChart.tsx (LineChart)
-- [x] Create components/Transactions.tsx (Table with filters)
-- [x] Create components/GoalsChart.tsx (BarChart)
+### Phase 4: Cleanup
 
-## Hooks
-
-- [x] Create hooks/useApi.ts for fetching data
-
-## Docker and Docs
-
-- [x] Create Dockerfile
-- [x] Create README.md
-
-## Testing
-
-- [x] Run locally
-- [x] Test Docker build
+- [ ] 9. Remove src/components/layout/Header.css
+- [ ] 10. Remove src/components/layout/Sidebar.css
+- [ ] 11. Verify no TypeScript errors

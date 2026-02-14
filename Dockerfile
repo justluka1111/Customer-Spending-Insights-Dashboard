@@ -1,4 +1,4 @@
-# Use Node.js 18 Alpine as base image
+# Use Node 18 Alpine
 FROM node:18-alpine
 
 # Set working directory
@@ -10,14 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy source code
+# Copy the rest of the app
 COPY . .
 
-# Build the application
+# Build app with Vite (no tsc)
 RUN npm run build
 
-# Expose port 3000
-EXPOSE 3000
+# Expose port (Vite preview uses 4173 by default, you can change to 3000)
+EXPOSE 4173
 
-# Start the application
+# Start preview server
 CMD ["npm", "run", "preview"]

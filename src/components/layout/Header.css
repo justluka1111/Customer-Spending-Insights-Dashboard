@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #dc2626;
+  border-bottom: 1px solid #b91c1c;
+}
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-actions svg {
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.header-actions svg:hover {
+  opacity: 0.8;
+}

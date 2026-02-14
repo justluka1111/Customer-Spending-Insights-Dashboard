@@ -7,7 +7,7 @@ import {
   fetchTransactions,
   fetchSpendingGoals,
   fetchFilters,
-} from "../utils/mockApi";
+} from "../services/api";
 import {
   CustomerProfile,
   SpendingSummary,

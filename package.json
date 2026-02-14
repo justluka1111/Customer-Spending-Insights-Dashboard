@@ -1,30 +1,26 @@
 {
-  "name": "customer-spending-insights-dashboard",
+  "name": "customer-spending-dashboard",
   "version": "1.0.0",
-  "description": "A production-ready React dashboard for customer spending insights",
-  "main": "index.js",
   "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "start": "npm run build && npm run preview"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@mui/material": "^5.14.0",
-    "@emotion/react": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "recharts": "^2.7.0"
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.13.0",
+    "recharts": "^3.7.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@types/recharts": "^1.8.29",
-    "typescript": "^5.1.0",
-    "vite": "^4.4.0",
-    "@vitejs/plugin-react": "^4.0.0"
-  },
-  "keywords": ["react", "typescript", "dashboard", "mui", "recharts"],
-  "author": "",
-  "license": "MI
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^4.5.14"
+  }
+}
