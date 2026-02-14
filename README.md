@@ -70,7 +70,7 @@ src/
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open http://localhost:3001 in your browser. in your browser.
 
 ### Docker
 
@@ -82,17 +82,17 @@ src/
 
 2. Run the container:
 
-   ```bash
-   docker run -p 3000:3000 spending-dashboard
-   ```
+   docker run -p 4173:4173 spending-dashboard
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Open http://localhost:4173 in your browser.
 
 ## Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
+
+> Note: The development server runs on port 3001, while the Docker container serves the production build on port 4173.
 
 ## API Integration
 
